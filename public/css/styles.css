@@ -1,0 +1,384 @@
+* {
+  font-family: Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  /* background-color: grey; */
+  color: black;
+}
+
+/* NAVBAR */
+#logo img {
+  height: 40px;
+}
+
+#navbar {
+  padding: 1.2em 2.4em;
+  margin-bottom: 1em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #006EB9;
+  color: #fff;
+  border-bottom: 1px solid blueviolet;
+}
+
+#navbar ul {
+  display: flex;
+  list-style: none;
+}
+
+#navbar ul li {
+  margin-left: 1em;
+}
+
+#navbar ul li a {
+  text-decoration: none;
+  color: #fff;
+  transition: 0.5s;
+  font-weight: bold;
+}
+
+#navbar ul li a:hover {
+  color: black;
+}
+
+/* CONTAINER */
+.message {
+  padding: 1em;
+  color: whitesmoke;
+  background-color: #006EB9;
+  border: 1px soli d#b8daff;
+  border-radius: 5px;
+  text-align: center;
+  margin: 0 auto 2em;
+  max-width: 60%;
+}
+
+.container {
+  min-height: 60vh;
+  padding: 2em;
+}
+
+/* LOGIN E REGISTER */
+.auth-container {
+  max-width: 450px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  border: 2px solid #007bff;
+  /* Cor da borda azul */
+  border-radius: 5px;
+  /* Borda arredondada */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  /* Sombra leve */
+  padding: 20px;
+  /* Espaçamento interno */
+}
+
+.auth-container h2 {
+  margin-bottom: 1em;
+  color: #006EB9;
+  border-left: 4px solid #006EB9;
+  padding: 0.3em;
+  width: 100px;
+}
+
+.auth-container a {
+  color: #006EB9;
+}
+
+.form-control {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1em;
+}
+
+.form-control label {
+  font-weight: bold;
+  margin-bottom: 0.5em;
+}
+
+.form-control input,
+.form-control textarea {
+  padding: 7px;
+  border-radius: 3px;
+  border: 1px solid #006EB9;
+}
+
+form input[type='submit'],
+.btn {
+  background-color: transparent;
+  color: #006EB9;
+  border: 2px solid #006EB9;
+  padding: 0.5em 1.3em;
+  margin-bottom: 1em;
+  font-size: 1em;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: 0.5s;
+}
+
+form input[type='submit']:hover,
+.btn:hover {
+  background-color: #006EB9;
+  color: #fff;
+}
+
+/* DASHBOARD */
+.title-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.5em;
+}
+
+.title-container h2 {
+  border-left: 4px solid #006EB9;
+  padding: 10px;
+}
+
+.dashboard h3 {
+  margin-bottom: 1.5em;
+}
+
+.dashboard ul {
+  list-style: none;
+}
+
+.dashboard li {
+  padding: 12px;
+  border-bottom: 1px solid #006EB9;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.dashboard .label {
+  font-weight: bold;
+  color: black;
+  margin-right: 2em;
+}
+
+.dashboard .actions {
+  display: flex;
+}
+
+
+/* botoes de ação edita, exluir e status */
+.dashboard .actions .btn {
+  color: black;
+  border-color: black;
+  margin: 0 0.5em;
+}
+
+/* voltar da ação editar*/
+.tought-form-container a {
+  color: black;
+}
+
+.tought-form-container a:hover {
+  color: #006EB9;
+}
+
+/* barra do criando pensamento*/
+.tought-form-container h1 {
+  border-left: 4px solid #006EB9;
+  padding: 10px;
+  margin-top: 1em;
+}
+
+.tought-form-container form {
+  max-width: 30%;
+  margin-top: 1.5em;
+}
+
+/* HOME */
+.home-header {
+  display: flex;
+  flex-direction: column;
+  max-width: 60%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.home-header h1 {
+  margin-bottom: 1em;
+}
+
+/* edita bordao home*/
+.home-header span {
+  color: #006EB9;
+}
+
+.home-header p {
+  margin-bottom: 1.2em;
+}
+
+.home-header form {
+  margin-bottom: 1em;
+}
+
+/*caixa de pesquisa tasks*/
+.home-header input {
+  /* border: none; */
+  padding: 0.5em;
+  margin-right: 1em;
+}
+
+.home-header input[type='text'] {
+  width: 60%;
+}
+
+.home-header input::placeholder {
+  color: black;
+}
+
+.order-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 80%;
+  margin: 0 auto 1em;
+}
+
+/* editar ordenaçao de pesquisa*/
+.order-container span {
+  font-weight: bold;
+  color: black;
+}
+
+.order-container form {
+  margin: 0;
+}
+
+.order-container button {
+  margin-bottom: 0;
+  border: none;
+  cursor: pointer;
+}
+
+.clean-search {
+  text-decoration: none;
+}
+
+.order-container button:hover,
+.order-container a:hover {
+  color: #006EB9;
+}
+
+.order-container span,
+.order-container button,
+.order-container a {
+  margin: 0 10px;
+}
+
+.order-container i {
+  color: #006EB9;
+}
+
+/* linha das tasks*/
+*/
+/* .toughts-container figure {
+    border-bottom: 1px solid #006EB9;
+    padding: 0.5em;
+    max-width: 50%;
+    margin: 0 auto 1em;
+    background-color: pink;
+  } */
+
+/* .toughts-container blockquote {
+    font-style: italic;
+    font-size: 2em;
+    margin-bottom: 0.4em;
+  }
+   */
+.toughts-container span {
+  color: #006EB9;
+}
+
+/* FOOTER */
+footer {
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top: 1px solid #006EB9;
+  background-color: whitesmoke;
+}
+
+footer span p {
+  font-weight: bold;
+  color: #006EB9;
+}
+
+
+.toughts-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+
+}
+
+.tought-card {
+  background-color: #afddec;
+  width: 300px; /* Largura do card */
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.tought-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.tought-author {
+  margin-top: 10px;
+  /* Espaço entre a descrição e o autor */
+  color: #666;
+  /* Cor do autor */
+  font-style: italic;
+}
+
+.tought-actions {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  height: 5em;
+}
+
+.tought-actions .btn {
+  margin-right: 10px;
+}
+
+.completed {
+  text-decoration-line: line-through;
+}
+
+
+.title-description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+}
+
+.tought-card-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  /* Para ocupar toda a altura */
+}
+
+.name-user{
+  color: red;
+}
