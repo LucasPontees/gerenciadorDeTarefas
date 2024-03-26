@@ -104,33 +104,34 @@ export default class TasksController {
         }
     }
 
-    static updateTought(req, res) {
+    static updateTask(req, res) {
         const id = req.params.id
     
         Task.findOne({ where: { id: id }, raw: true })
-          .then((tought) => {
-            res.render('toughts/edit', { tought })
+          .then((task) => {
+            res.render('toughts/edit', { task })
           })
           .catch((err) => console.log())
       }
     
-      static updateToughtPost(req, res) {
+      static updateTaskPost(req, res) {
         const id = req.body.id
     
-        const tought = {
+        const task = {
           title: req.body.title,
           description: req.body.description,
         }
     
-        Task.update(tought, { where: { id: id } })
+        Task.update(task, { where: { id: id } })
           .then(() => {
-            req.flash('message', 'Pensamento atualizado com sucesso!')
+            req.flash('message', 'Tarefa atualizada com sucesso!')
             req.session.save(() => {
               res.redirect('/toughts/dashboard')
             })
           })
           .catch((err) => console.log())
       }
+
     static async completeTask(req, res) {
         const taskId = req.params.id;
     
