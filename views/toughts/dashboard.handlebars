@@ -6,13 +6,12 @@
     <h3>Suas tarefas:</h3>
     <div class="tasks-container">
         {{#each tasks}}
-        <div class="tought-card {{#if this.completed}}completed{{/if}}">
+        <div class="task-card {{#if this.completed}}completed{{/if}}">
             <div class="title-description">
-                <span class="tought-title">{{this.title}}</span> <br>
+                <span class="task-title">{{this.title}}</span> <br>
                 <p class="task-description">{{this.description}}</p>
             </div>
-            <span class="tought-author"></span>
-            <div class="tought-actions">
+            <div class="task-actions">
                 <a href="/toughts/edit/{{this.id}}" class="btn">Editar</a>
                 <form action="/toughts/remove" method="POST">
                     <input type="hidden" name="id" value="{{this.id}}">

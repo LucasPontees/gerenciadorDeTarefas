@@ -310,7 +310,7 @@ footer span p {
 
 }
 
-.tought-card {
+.task-card {
   background-color: #afddec;
   width: 300px; /* Largura do card */
   padding: 20px;
@@ -322,13 +322,13 @@ footer span p {
   justify-content: space-between;
 }
 
-.tought-title {
+.task-title {
   font-size: 18px;
   font-weight: bold;
   margin-bottom: 5px;
 }
 
-.tought-author {
+.tosk-author {
   margin-top: 10px;
   /* Espaço entre a descrição e o autor */
   color: #666;
@@ -336,7 +336,7 @@ footer span p {
   font-style: italic;
 }
 
-.tought-actions {
+.task-actions {
   margin-top: 10px;
   display: flex;
   justify-content: center;
@@ -345,7 +345,7 @@ footer span p {
   height: 5em;
 }
 
-.tought-actions .btn {
+.task-actions .btn {
   margin-right: 10px;
 }
 
@@ -360,15 +360,6 @@ footer span p {
   justify-content: center;
 
 }
-
-.tought-card-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 100%;
-  /* Para ocupar toda a altura */
-}
-
 .name-user{
   color: red;
 }
