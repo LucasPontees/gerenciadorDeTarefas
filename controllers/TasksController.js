@@ -28,15 +28,15 @@ export default class TasksController {
             order: [['createdAt', order]]
         }) 
 
-        const toughts = taskData.map((result)=> result.get({ plain: true}))
+        const tasks = taskData.map((result)=> result.get({ plain: true}))
 
-        let toughtsQty = toughts.length
-        if(toughtsQty === 0){
-            toughtsQty = false
+        let tasksQty = tasks.length
+        if(tasksQty === 0){
+            tasksQty = false
         }
 
 
-        res.render('toughts/home', { toughts, toughtsQty, search})
+        res.render('toughts/home', { tasks, tasksQty, search})
     }
 
     static async dashboard(req, res) {
@@ -52,15 +52,15 @@ export default class TasksController {
         if (!user) {
             res.redirect('/login')
         }
-        const toughts = user.Toughts.map((result) => result.dataValues)
+        const tasks = user.Toughts.map((result) => result.dataValues)
         
-        let emptyToughts = false
+        let emptyTasks = false
 
-        if(toughts.length ===0 ) {
-            emptyToughts = true
+        if(tasks.length ===0 ) {
+            emptyTasks = true
         }
         
-        res.render('toughts/dashboard', { toughts, emptyToughts })
+        res.render('toughts/dashboard', { tasks, emptyTasks })
     }
 
     static createTask(req, res) {
