@@ -1,7 +1,7 @@
 <div class="dashboard">
     <div class="title-container">
         <h2>Dashboard</h2>
-        <a href="/toughts/add" class="btn">Criar tarefa</a>
+        <a href="/tasks/add" class="btn">Criar tarefa</a>
     </div>
     <h3>Suas tarefas:</h3>
     <div class="tasks-container">
@@ -12,12 +12,12 @@
                 <p class="task-description">{{this.description}}</p>
             </div>
             <div class="task-actions">
-                <a href="/toughts/edit/{{this.id}}" class="btn">Editar</a>
-                <form action="/toughts/remove" method="POST">
+                <a href="/tasks/edit/{{this.id}}" class="btn">Editar</a>
+                <form action="/tasks/remove" method="POST">
                     <input type="hidden" name="id" value="{{this.id}}">
                     <input type="submit" value="Excluir" class="btn">
                 </form>
-                <form action="/toughts/{{this.id}}/complete" method="POST">
+                <form action="/tasks/{{this.id}}/complete" method="POST">
                     <input type="hidden" name="id" value="{{this.id}}">
                     <button type="submit" class="btn">
                         {{#if this.completed}}
@@ -32,6 +32,6 @@
         {{/each}}
     </div>
     {{#if emptyTasks}}
-    <p>Ainda não há nenhuma tarefa, crie <a href="/toughts/add">clicando aqui</a></p>
+    <p>Ainda não há nenhuma tarefa, crie <a href="/tasks/add">clicando aqui</a></p>
     {{/if}}
 </div>

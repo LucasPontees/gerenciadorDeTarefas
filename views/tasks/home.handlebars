@@ -28,12 +28,14 @@
         <a href="/" class="clean-search">Limpar</a>
     </div>
 </div>
-<div class="tasks-container">
-    {{#each tasks}}
-    <div class="task-card">
-        <blockquote class="task-title">{{this.title}}</blockquote>
-        <p class="task-description">{{this.description}}</p> <br>
-        <figcaption class="task-author">por <strong>{{this.User.name}}</strong></figcaption>
+<div class="dashboard">
+    <div class="tasks-container">
+        {{#each tasks}}
+        <div class="task-card">
+            <blockquote class="task-title">{{this.title}}</blockquote>
+            <p class="task-description">{{this.description}}</p> <br>
+            <figcaption class="task-author">por <strong>{{this.User.name}}</strong></figcaption>
+        </div>
+        {{/each}}
     </div>
-    {{/each}}
 </div>

@@ -36,7 +36,7 @@ export default class TasksController {
         }
 
 
-        res.render('toughts/home', { tasks, tasksQty, search})
+        res.render('tasks/home', { tasks, tasksQty, search})
     }
 
     static async dashboard(req, res) {
@@ -60,11 +60,11 @@ export default class TasksController {
             emptyTasks = true
         }
         
-        res.render('toughts/dashboard', { tasks, emptyTasks })
+        res.render('tasks/dashboard', { tasks, emptyTasks })
     }
 
     static createTask(req, res) {
-        res.render('toughts/create')
+        res.render('tasks/create')
     }
 
     static async createTaskSave(req, res) {
@@ -75,7 +75,7 @@ export default class TasksController {
             const task = await Task.create({ title, description, UserId})
 
             req.flash('message', 'Tarefa criada com sucesso !')
-            res.redirect('/toughts/dashboard')
+            res.redirect('/tasks/dashboard')
 
 
             req.session.save(() => {
@@ -96,7 +96,7 @@ export default class TasksController {
             req.flash('message', 'Tarefa removida !')
 
             req.session.save(() => {
-                res.redirect('/toughts/dashboard')
+                res.redirect('/tasks/dashboard')
 
             })
         } catch (error) {
@@ -109,7 +109,7 @@ export default class TasksController {
     
         Task.findOne({ where: { id: id }, raw: true })
           .then((task) => {
-            res.render('toughts/edit', { task })
+            res.render('tasks/edit', { task })
           })
           .catch((err) => console.log())
       }
@@ -126,7 +126,7 @@ export default class TasksController {
           .then(() => {
             req.flash('message', 'Tarefa atualizada com sucesso!')
             req.session.save(() => {
-              res.redirect('/toughts/dashboard')
+              res.redirect('/tasks/dashboard')
             })
           })
           .catch((err) => console.log())
@@ -139,7 +139,7 @@ export default class TasksController {
             const task = await Task.findByPk(taskId);
             if (!task) {
                 req.flash('message', 'Tarefa não encontrada.');
-                res.redirect('/toughts/dashboard');
+                res.redirect('/tasks/dashboard');
                 return;
             }
     
@@ -147,11 +147,11 @@ export default class TasksController {
             task.completed = !task.completed;
             await task.save();
     
-            res.redirect('/toughts/dashboard');
+            res.redirect('/tasks/dashboard');
         } catch (error) {
             console.error(error);
             req.flash('message', 'Ocorreu um erro ao marcar a tarefa.');
-            res.redirect('/toughts/dashboard');
+            res.redirect('/tasks/dashboard');
         }
     }
     

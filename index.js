@@ -58,7 +58,7 @@ app.use((req, res, next) => {
     next()
 })
 
-app.use('/toughts', tasksRoutes)
+app.use('/tasks', tasksRoutes)
 app.use('/', authRoutes)
 
 app.get('/', TasksController.showTask)
