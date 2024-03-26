@@ -1,4 +1,4 @@
-import Task from "../models/toughts.js";
+import Task from "../models/TasksModel.js";
 import User from "../models/User.js";
 import {Op} from 'sequelize'
 
@@ -52,7 +52,7 @@ export default class TasksController {
         if (!user) {
             res.redirect('/login')
         }
-        const tasks = user.Toughts.map((result) => result.dataValues)
+        const tasks = user.Tasks.map((result) => result.dataValues)
         
         let emptyTasks = false
 

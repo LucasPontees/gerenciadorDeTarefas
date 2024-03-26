@@ -1,6 +1,6 @@
 import { Sequelize } from "sequelize";
 
-const sequelize = new Sequelize('toughts_db', 'root', '', {
+const sequelize = new Sequelize('inova_task', 'root', '', {
     host: 'localhost',
     dialect: 'mysql'
 })

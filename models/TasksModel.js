@@ -2,7 +2,7 @@ import { DataTypes } from "sequelize";
 import db from '../db/conn.js'
 import User from "./User.js";
 
-const Task = db.define('Tought', {
+const Task = db.define('Tasks', {
     title: {
         type: DataTypes.STRING,
         allowNull: false,
