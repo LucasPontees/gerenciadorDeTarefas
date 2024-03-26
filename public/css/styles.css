@@ -92,6 +92,12 @@
   flex-direction: column;
   margin-bottom: 1em;
 }
+.task-form-container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1em;
+  height: 32px;
+}
 
 .form-control label {
   font-weight: bold;
@@ -173,22 +179,22 @@ form input[type='submit']:hover,
 }
 
 /* voltar da ação editar*/
-.tought-form-container a {
+.task-form-container a {
   color: black;
 }
 
-.tought-form-container a:hover {
+.task-form-container a:hover {
   color: #006EB9;
 }
 
 /* barra do criando tarefa*/
-.tought-form-container h1 {
+.task-form-container h1 {
   border-left: 4px solid #006EB9;
   padding: 10px;
   margin-top: 1em;
 }
 
-.tought-form-container form {
+.task-form-container form {
   max-width: 30%;
   margin-top: 1.5em;
 }
@@ -277,23 +283,7 @@ form input[type='submit']:hover,
   color: #006EB9;
 }
 
-/* linha das tasks*/
-*/
-/* .toughts-container figure {
-    border-bottom: 1px solid #006EB9;
-    padding: 0.5em;
-    max-width: 50%;
-    margin: 0 auto 1em;
-    background-color: pink;
-  } */
-
-/* .toughts-container blockquote {
-    font-style: italic;
-    font-size: 2em;
-    margin-bottom: 0.4em;
-  }
-   */
-.toughts-container span {
+span {
   color: #006EB9;
 }
 
@@ -313,7 +303,7 @@ footer span p {
 }
 
 
-.toughts-container {
+.tasks-container {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
