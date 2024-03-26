@@ -63,18 +63,18 @@ export default class TasksController {
         res.render('toughts/dashboard', { toughts, emptyToughts })
     }
 
-    static createTought(req, res) {
+    static createTask(req, res) {
         res.render('toughts/create')
     }
 
-    static async createToughtSave(req, res) {
+    static async createTaskSave(req, res) {
         const { title, description } = req.body;
         const UserId = req.session.userid;
 
         try {
-            const tought = await Task.create({ title, description, UserId})
+            const task = await Task.create({ title, description, UserId})
 
-            req.flash('message', 'pensamento criado')
+            req.flash('message', 'Tarefa criada com sucesso !')
             res.redirect('/toughts/dashboard')
 
 
