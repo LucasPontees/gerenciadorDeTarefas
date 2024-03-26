@@ -5,7 +5,7 @@ import FileStore from 'session-file-store'
 import flash from 'express-flash'
 import path from 'path'
 import os from 'os'
-import toughtsRoutes from './routes/toughtsRoutes.js'
+import tasksRoutes from './routes/tasksRoutes.js'
 import authRoutes from './routes/authRoutes.js'
 
 const app = express()
@@ -58,7 +58,7 @@ app.use((req, res, next) => {
     next()
 })
 
-app.use('/toughts', toughtsRoutes)
+app.use('/toughts', tasksRoutes)
 app.use('/', authRoutes)
 
 app.get('/', TasksController.showTask)
