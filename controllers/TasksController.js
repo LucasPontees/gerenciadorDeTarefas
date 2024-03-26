@@ -104,64 +104,48 @@ export default class TasksController {
         }
     }
 
-    static async updateTask(req, res) {
-
+    static updateTought(req, res) {
         const id = req.params.id
-
-
-        const task = await Task.findOne({where: {id: id}, raw: true})
-
-        res.render('toughts/edit', {task})
-
-    }
-
-    static async updateToughtSave(req, res) {
-        const { id, title, description } = req.body;
     
-        try {
-            const tought = await Task.findByPk(id);
-            if (!tought) {
-                req.flash('message', 'Pensamento não encontrado.');
-                res.redirect('/toughts/dashboard');
-                return;
-            }
+        Task.findOne({ where: { id: id }, raw: true })
+          .then((tought) => {
+            res.render('toughts/edit', { tought })
+          })
+          .catch((err) => console.log())
+      }
     
-            tought.title = title;
-            tought.description = description;
-            await tought.save();
+      static updateToughtPost(req, res) {
+        const id = req.body.id
     
-            req.flash('message', 'Pensamento atualizado com sucesso!');
-            res.redirect('/toughts/dashboard');
-        } catch (error) {
-            console.error(error);
-            req.flash('message', 'Erro ao atualizar pensamento.');
-            res.redirect(`/toughts/edit/${id}`);
+        const tought = {
+          title: req.body.title,
+          description: req.body.description,
         }
-    }
-
-    static async completeTought(req, res) {
-        const toughtId = req.params.id;
+    
+        Task.update(tought, { where: { id: id } })
+          .then(() => {
+            req.flash('message', 'Pensamento atualizado com sucesso!')
+            req.session.save(() => {
+              res.redirect('/toughts/dashboard')
+            })
+          })
+          .catch((err) => console.log())
+      }
+    static async completeTask(req, res) {
+        const taskId = req.params.id;
     
         try {
-            const tought = await Task.findByPk(toughtId);
-            if (!tought) {
+            const task = await Task.findByPk(taskId);
+            if (!task) {
                 req.flash('message', 'Tarefa não encontrada.');
                 res.redirect('/toughts/dashboard');
                 return;
             }
     
             // Inverte o status de completude da tarefa
-            tought.completed = !tought.completed;
-            await tought.save();
+            task.completed = !task.completed;
+            await task.save();
     
-            let message = '';
-            if (tought.completed) {
-                message = '';
-            } else {
-                message = '';
-            }
-    
-            req.flash('message', message);
             res.redirect('/toughts/dashboard');
         } catch (error) {
             console.error(error);
