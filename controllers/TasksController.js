@@ -93,7 +93,7 @@ export default class TasksController {
         try {
             await Task.destroy({ where: { id: id, UserId: UserId } })
 
-            req.flash('message', 'pensamento removido')
+            req.flash('message', 'Tarefa removida !')
 
             req.session.save(() => {
                 res.redirect('/toughts/dashboard')
