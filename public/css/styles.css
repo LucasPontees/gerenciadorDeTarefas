@@ -294,7 +294,6 @@ footer {
   align-items: center;
   justify-content: center;
   border-top: 1px solid #006EB9;
-  background-color: whitesmoke;
 }
 
 footer span p {
@@ -359,7 +358,4 @@ footer span p {
   flex-direction: column;
   justify-content: center;
 
-}
-.name-user{
-  color: red;
 }
