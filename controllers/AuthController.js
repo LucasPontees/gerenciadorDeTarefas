@@ -29,7 +29,7 @@ export default class AuthController {
       }
 
       req.session.userid = user.id
-      req.flash('message', `Seja bem vindo,  ${user.name}`)
+      req.flash('message', `Seja Bem Vindo(a),  ${user.name}.`)
 
       req.session.save(()=>{res.redirect('/')})
 

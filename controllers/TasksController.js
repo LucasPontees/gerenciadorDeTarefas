@@ -73,8 +73,6 @@ export default class TasksController {
 
         try {
             const task = await Task.create({ title, description, UserId})
-
-            req.flash('message', 'Tarefa criada com sucesso !')
             res.redirect('/tasks/dashboard')
 
 

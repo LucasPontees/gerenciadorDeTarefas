@@ -1,16 +1,16 @@
 <div class="task-form-container">
     <a href="/tasks/dashboard">Voltar</a>
-    <h1>editar um Pensamento:</h1>
+    <h1>Editar tarefa:</h1>
     <form action="/tasks/edit" method="POST">
         <input type="hidden" name="id" value="{{task.id}}">
         <div class="form-control">
             <label for="title">Título:</label>
-            <input type="text" name="title" placeholder="edite o pensamento" value="{{task.title}}">
+            <input type="text" name="title" placeholder="edite" value="{{task.title}}">
         </div>
         <div class="form-control">
             <label for="description">Descrição:</label>
             <textarea name="description" placeholder="Edite a descrição">{{task.description}}</textarea>
         </div>
-        <input type="submit" value="editar Pensamento">
+        <input type="submit" value="Editar">
     </form>
 </div>

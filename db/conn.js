@@ -7,7 +7,7 @@ const sequelize = new Sequelize('inova_task', 'root', '', {
 
 try{
     sequelize.authenticate()
-    console.log('succcess banco')
+    console.log(' cnx success')
 }catch(err){
     console.log(`no connect: ${err}`)
 }

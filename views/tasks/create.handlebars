@@ -1,15 +1,19 @@
-<div class="task-form-container" >
-    <a href="/tasks/dashboard">Voltar</a>
-    <h1>Criando uma tarefa:</h1>
-    <form action="/tasks/add" method="POST" id="edit-create">
-        <div class="form-control">
-            <label for="title">Título:</label>
-            <input type="text" name="title" placeholder="Digite o título" required>
+<div class="container task-form-container" >
+    <div class="row" >
+        <div class="col-6">
+            <a href="/tasks/dashboard">Voltar</a>
+            <h1>Criando uma tarefa:</h1>
+            <form action="/tasks/add" method="POST" id="edit-create">
+                <div class="form-control">
+                    <label for="title">Título:</label>
+                    <input type="text" name="title" placeholder="Digite o título" required>
+                </div>
+                <div class="form-control">
+                    <label for="description">Descrição:</label>
+                    <textarea name="description" placeholder="Digite a descrição" required></textarea>
+                </div>
+                <input type="submit" value="Criar tarefa">
+            </form>
         </div>
-        <div class="form-control">
-            <label for="description">Descrição:</label>
-            <textarea name="description" placeholder="Digite a descrição" required></textarea>
-        </div>
-        <input type="submit" value="Criar tarefa">
-    </form>
+    </div>
 </div>
