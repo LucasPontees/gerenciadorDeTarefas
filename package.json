@@ -1,5 +1,5 @@
 {
-  "name": "toughtsexpresssequelizemvc",
+  "name": "inovatask",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -8,7 +8,7 @@
     "dev": "nodemon --watch index.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "LucasPontees",
   "license": "ISC",
   "dependencies": {
     "bcryptjs": "^2.4.3",
