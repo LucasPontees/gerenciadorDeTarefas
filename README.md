@@ -16,11 +16,13 @@
 
 <br/>
 
-<div>
 
-<img src="./public/img/ParaREADME.jpg"
+<div align="center">
+
+<img src="./public/img/ParaREADME.jpg" />
 
 </div>
+</br>
 
 ## 👨‍🏭 Requisitos
 
