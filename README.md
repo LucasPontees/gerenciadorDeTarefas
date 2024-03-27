@@ -1,6 +1,6 @@
 <div align="center">
   <div align="center">
-    <img width="180px" src="./public/img/favicon.ico" alt="atxsales" />
+    <img width="180px" src="./public/img/inovatask.png" alt="atxsales" />
   </div>
 
   <br/>
@@ -16,9 +16,15 @@
 
 <br/>
 
+<div>
+
+<img src="./public/img/ParaREADME.jpg"
+
+</div>
+
 ## 👨‍🏭 Requisitos
 
-Um serviço de visulização e criação de banco de dados, para este projeto utilizei o xampp, mas você pode escolher um da sua preferência.
+Um serviço de visualização e criação de banco de dados, para este projeto utilizei o xampp, mas você pode escolher um da sua preferência.
 
 Node Js V20.11.1
 
@@ -35,5 +41,5 @@ $ npm install
 $ npm run dev
 ```
 
-Com isso seu InovasTask estará rodando no endereço http://localhost:3000
+Com isso seu InovaTask estará rodando no endereço http://localhost:3000
 
