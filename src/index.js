@@ -5,15 +5,15 @@ import FileStore from 'session-file-store'
 import flash from 'express-flash'
 import path from 'path'
 import os from 'os'
-import tasksRoutes from './routes/tasksRoutes.js'
-import authRoutes from './routes/authRoutes.js'
+import tasksRoutes from '../routes/tasksRoutes.js'
+import authRoutes from '../routes/authRoutes.js'
 
 const app = express()
 const FileStoreSession = FileStore(session)
 
 
-import conn from './db/conn.js'
-import TasksController from './controllers/TasksController.js'
+import conn from '../db/conn.js'
+import TasksController from '../controllers/TasksController.js'
 
 app.engine('handlebars', engine())
 app.set('view engine', 'handlebars')
